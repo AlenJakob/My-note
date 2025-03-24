@@ -1,5 +1,7 @@
 import { Grid, Box, Button } from "@chakra-ui/react";
-import NoteButton from "./NoteButton/NoteButton";
+import NoteButton from "@/components/Note/NoteButton/NoteButton";
+import NoteContent from "@/components/Note/NoteContent";
+import { FiTrash2, FiDownload } from "react-icons/fi";
 
 const NoteWrapper = () => {
 	return (
@@ -8,7 +10,7 @@ const NoteWrapper = () => {
 			w={"100%"}
 			borderTop="1px solid"
 			borderColor="gray.300"
-			// height={"100vh"}
+			// maxHeight={"100vh"}
 		>
 			<Box
 				display="flex"
@@ -34,13 +36,31 @@ const NoteWrapper = () => {
 				<NoteButton />
 				<NoteButton />
 				<NoteButton />
-				<NoteButton />
 			</Box>
-			<Box bg="green.100" p={4}>
-				Kolumna 2 Lista Notatek
-			</Box>
-			<Box bg="red.100" p={4} borderLeft="1px solid" borderColor="gray.300">
-				Kolumna 3 dodatkowe menu z opcjami aby archiwizowac notatki oraz usuwać
+			<Grid gap={4}>
+				<NoteContent />
+			</Grid>
+			<Box p={4} borderLeft="1px solid" borderColor="gray.300">
+				<Button
+					justifyContent="flex-start"
+					textAlign="left"
+					variant="outline"
+					my={2}
+					w="100%"
+				>
+					<FiTrash2 />
+					Archiwizuj notatkę
+				</Button>
+				<Button
+					justifyContent="flex-start"
+					textAlign="left"
+					variant="outline"
+					my={2}
+					w="100%"
+				>
+					<FiDownload />
+					Usuń Notatkę
+				</Button>
 			</Box>
 		</Grid>
 	);

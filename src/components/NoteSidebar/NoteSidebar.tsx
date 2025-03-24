@@ -1,8 +1,8 @@
 import { Button, Text, Separator, VStack } from "@chakra-ui/react";
 
-import { AiFillHome } from "react-icons/ai";
-import { AiOutlineCloudDownload } from "react-icons/ai";
-import { AiFillTag } from "react-icons/ai";
+import { AiFillHome,  AiOutlineCloudDownload } from "react-icons/ai";
+import { FiTag } from "react-icons/fi";
+
 
 const NoteSidebar = () => {
 	return (
@@ -11,7 +11,6 @@ const NoteSidebar = () => {
 			flexDirection="column"
 			alignItems={"flex-start"}
 			w="300px"
-			// minH="1000px"
 			bg="gray.100"
 			color="#000"
 			border="1px solid"
@@ -47,27 +46,27 @@ const NoteSidebar = () => {
 					Tags
 				</Text>
 				<Text display="flex" alignItems="center" gap={2}>
-					<AiFillTag />
+					<FiTag />
 					#TODO
 				</Text>
 				<Text display="flex" alignItems="center" gap={2}>
-					<AiFillTag />
+					<FiTag />
 					#Archived notes
 				</Text>
 				<Text display="flex" alignItems="center" gap={2}>
-					<AiFillTag />
+					<FiTag />
 					#All notes
 				</Text>
 				<Text display="flex" alignItems="center" gap={2}>
-					<AiFillTag />
+					<FiTag />
 					#Archived notes
 				</Text>
 				<Text display="flex" alignItems="center" gap={2}>
-					<AiFillTag />
+					<FiTag />
 					#All notes
 				</Text>
 				<Text display="flex" alignItems="center" gap={2}>
-					<AiFillTag />
+					<FiTag />
 					#Archived notes
 				</Text>
 			</span>
